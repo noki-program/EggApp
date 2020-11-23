@@ -18,9 +18,9 @@ export default function App() {
   if (count === 75) {
     output = "がんばれ！";
   } else if (count === 50) {
-    output = "諦めないで！"
+    output = "諦めないで！";
   } else if (count === 20) {
-    output = "もう少し！"
+    output = "もう少し！";
   } else if (count === 0) {
     output = "やったね！";
   } else if (count < 0) {
