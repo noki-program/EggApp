@@ -1,7 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import React from "react";
-import { StyleSheet, Text, View, Pressable, Image} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import egg01 from "./assets/egg01.png";
 import egg02 from "./assets/egg02.png";
 import egg03 from "./assets/egg03.png";
@@ -50,9 +57,9 @@ export default function App() {
         </View>
 
         <View>
-          <Pressable onPress={countDown}>
+          <TouchableOpacity onPress={countDown}>
             <Image source={eggImg} style={styles.egg} />
-          </Pressable>
+          </TouchableOpacity>
         </View>
 
         <StatusBar style="auto" />
@@ -70,9 +77,9 @@ export default function App() {
         </View>
 
         <View style={styles.onceAgainButton}>
-          <Pressable onPress={onceAgain}>
+          <TouchableOpacity onPress={onceAgain}>
             <Text style={styles.buttonText}>🔥もう一度挑戦する🔥</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
 
         <StatusBar style="auto" />
