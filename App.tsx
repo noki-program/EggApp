@@ -14,7 +14,7 @@ export default function App() {
   setCount(count - 1)
   }
 
-  let output: any = count;
+  let output: any;
   if (count === 75) {
     output = "がんばれ！";
   } else if (count === 50) {
@@ -29,7 +29,7 @@ export default function App() {
     output = count;
   }
 
-  let eggImg = egg01;
+  let eggImg;
   if (count <= 50 && count > 0) {
     eggImg = egg02;
   } else if (count <= 0) {
