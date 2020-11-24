@@ -41,7 +41,7 @@ export default function App() {
   const onceAgain = () => {
     setCount(count * 0 + 100);
   }
-  
+
   if (count > 0) {
     return (
       <View style={styles.container}>
@@ -62,13 +62,11 @@ export default function App() {
     return (
       <View style={styles.container}>
         <View style={styles.remainingCountContainer}>
-          <Text style={styles.remainingCountText}>{output}</Text>
+          <Text style={styles.remainingCountText}>また遊んでね！</Text>
         </View>
 
         <View>
-          <Pressable onPress={countDown}>
-            <Image source={eggImg} style={styles.egg} />
-          </Pressable>
+          <Image source={egg03} style={styles.egg} />
         </View>
 
         <View style={styles.onceAgainButton}>
