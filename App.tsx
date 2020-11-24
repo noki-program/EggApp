@@ -29,7 +29,7 @@ export default function App() {
     output = count;
   }
 
-  let eggImg = egg01
+  let eggImg = egg01;
   if (count <= 50 && count > 0) {
     eggImg = egg02;
   } else if (count <= 0) {
