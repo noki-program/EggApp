@@ -14,7 +14,7 @@ export default function App() {
   setCount(count - 1)
   }
 
-  let output: any;
+  let output;
   if (count === 75) {
     output = "がんばれ！";
   } else if (count === 50) {
@@ -41,28 +41,46 @@ export default function App() {
   const onceAgain = () => {
     setCount(count * 0 + 100);
   }
+  
+  if (count > 0) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.remainingCountContainer}>
+          <Text style={styles.remainingCountText}>{output}</Text>
+        </View>
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.remainingCountContainer}>
-        <Text style={styles.remainingCountText}>{output}</Text>
+        <View>
+          <Pressable onPress={countDown}>
+            <Image source={eggImg} style={styles.egg} />
+          </Pressable>
+        </View>
+
+        <StatusBar style="auto" />
       </View>
+    );
+  } else {
+    return (
+      <View style={styles.container}>
+        <View style={styles.remainingCountContainer}>
+          <Text style={styles.remainingCountText}>{output}</Text>
+        </View>
 
-      <View>
-        <Pressable onPress={countDown}>
-          <Image source={eggImg} style={styles.egg} />
-        </Pressable>
+        <View>
+          <Pressable onPress={countDown}>
+            <Image source={eggImg} style={styles.egg} />
+          </Pressable>
+        </View>
+
+        <View style={styles.onceAgainButton}>
+          <Pressable onPress={onceAgain}>
+            <Text style={styles.buttonText}>🔥もう一度挑戦する🔥</Text>
+          </Pressable>
+        </View>
+
+        <StatusBar style="auto" />
       </View>
-
-      <View style={styles.onceAgainButton}>
-        <Pressable onPress={onceAgain}>
-          <Text style={styles.buttonText}>🔥もう一度挑戦する🔥</Text>
-        </Pressable>
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
-  );
+    );
+  }
 }
 
 const styles = StyleSheet.create({
